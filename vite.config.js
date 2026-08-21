@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 
+  // GitHub Pages repository path
+  base: '/react-app/',
+
   build: {
     target: 'es2020',
     outDir: 'dist',
