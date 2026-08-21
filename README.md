@@ -1,13 +1,25 @@
 # React App
 
-React application built with Vite.
+A React application built with Vite.
+
+## Project Information
+
+- **Framework:** React
+- **Build Tool:** Vite
+- **Language:** JavaScript / JSX
+- **Package Manager:** npm
 
 ## Requirements
 
+Make sure you have the following installed:
+
 - Node.js
 - npm
+- Git
 
-## Install
+## Installation
+
+Clone the repository:
 
 ```bash
-npm install
+git clone https://github.com/Pravin1027/react-app.git
