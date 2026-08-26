@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React App
 
 A React application built with Vite.
@@ -23,3 +24,6 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Pravin1027/react-app.git
+=======
+# Angular-application-build
+>>>>>>> f462a73c4258152548129cf4229cb02e647a6121
