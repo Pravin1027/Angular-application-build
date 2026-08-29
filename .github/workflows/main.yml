@@ -1,22 +1,34 @@
-name: Build my angular app
+name: next js build with caching & artifacts
 
-on: 
-  push:
-    branches: [ main ]
+on:
+ push:
+   branches: [ main ]
 
 jobs:
-    build-angular-app:
-     runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-     steps:
-         - uses: actions/checkout@v4
-         - name: Use Node.js
-           uses: actions/setup-node@v4
-           with:
-             node-version: 22.x
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
 
-         - name: install dependencies
-           run: |
-            npm install
-            npm run build 
+      - name: setup node Js
+        uses: actions/setup-node@v6.5.0
+        with:
+          node-version: '24.x'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: build next Js app
+        run:  npm run build
+
+      - name: upload build on Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: nextJs-build
+          path: out/
+        
+      
           
